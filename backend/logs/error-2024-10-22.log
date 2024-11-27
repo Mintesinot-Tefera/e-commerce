@@ -1,0 +1,44 @@
+2024-10-22 11:57:50 [error]: Unhandled Error: ReferenceError: errors is not defined
+    at register (D:\FullStack\e-commercebackend\src\controllers\authController.js:14:76)
+    at Layer.handle [as handle_request] (D:\FullStack\e-commercebackend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\FullStack\e-commercebackend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\FullStack\e-commercebackend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\FullStack\e-commercebackend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:47:12)
+2024-10-22 11:59:14 [error]: Unhandled Error: ReferenceError: errors is not defined
+    at register (D:\FullStack\e-commercebackend\src\controllers\authController.js:14:76)
+    at Layer.handle [as handle_request] (D:\FullStack\e-commercebackend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\FullStack\e-commercebackend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\FullStack\e-commercebackend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\FullStack\e-commercebackend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:47:12)
+2024-10-22 12:02:57 [error]: Unhandled Error: ReferenceError: errors is not defined
+    at register (D:\FullStack\e-commercebackend\src\controllers\authController.js:14:76)
+    at Layer.handle [as handle_request] (D:\FullStack\e-commercebackend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\FullStack\e-commercebackend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\FullStack\e-commercebackend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\FullStack\e-commercebackend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:47:12)
+2024-10-22 12:03:03 [error]: Unhandled Error: ReferenceError: errors is not defined
+    at register (D:\FullStack\e-commercebackend\src\controllers\authController.js:14:76)
+    at Layer.handle [as handle_request] (D:\FullStack\e-commercebackend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\FullStack\e-commercebackend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\FullStack\e-commercebackend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\FullStack\e-commercebackend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\FullStack\e-commercebackend\node_modules\express\lib\router\index.js:47:12)

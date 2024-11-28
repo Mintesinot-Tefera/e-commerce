@@ -3,12 +3,16 @@ import ProductCard from './ProductCard';
 import ProductDetails from './ProductDetails';
 import axios from 'axios';
 import Sidebar from './Sidebar';
+import { useContext } from 'react';
+import { CartContext } from '../App';
+
 
 const ProductListWithDetails = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [products, setProducts] = useState([]); // State for products
   const [error, setError] = useState(null); // State for errors
 
+  const { addToCart } = useContext(CartContext);
 
 
   const categories = [
@@ -184,7 +188,10 @@ const ProductListWithDetails = () => {
       {/* Main Content Area */}
       <main style={{ width: '80%', padding: '20px' }}>
         {selectedProduct ? (
-          <ProductDetails product={selectedProduct} onBack={handleBackToProducts} />
+          <ProductDetails 
+          product={selectedProduct} 
+          onBack={handleBackToProducts}
+          onAddToCart={addToCart} />
         ) : (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
             {products.map((product) => (

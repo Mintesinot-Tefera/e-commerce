@@ -10,7 +10,7 @@ const ProductDetails = ({ product, onBack, onAddToCart }) => {
     };
 
     const handleAddToCart = () => {
-        // onAddToCart(product, quantity);
+        onAddToCart(product, quantity);
     };
 
     return (

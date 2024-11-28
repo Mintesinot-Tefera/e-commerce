@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FaShoppingCart } from 'react-icons/fa'; // Import cart icon
 import myLogo from './logo/logo.png';
 import myLogo2 from './logo/logo1.png';
 import myLogo3 from './logo/logo2.png';
 import myLogo4 from './logo/logo3.png';
 import myLogo5 from './logo/logo4.png';
-
+import { CartContext } from '../App';
 
 
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
@@ -19,8 +19,17 @@ const Header =
 
   () => {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
-    const [cartItems, setCartItems] = useState(3); // Sample cart items count
+    // const [cartItems, setCartItems] = useState(3); // Sample cart items count
 
+    const { cart } = useContext(CartContext);
+    const navigate = useNavigate();
+
+  // Define the navigateToCart method
+  const navigateToCart = () => {
+    navigate('/cart'); // Navigate to the cart page
+  };
+
+  
     const headerStyle = {
       backgroundColor: '#004d4d',
       // backgroundColor: '#009900',
@@ -187,13 +196,22 @@ const Header =
           <Link href="/signup"> <span style={{ color: '#fff', cursor: 'pointer' }}> Sign Up</span> </Link>
 
           <div style={cartContainerStyle}
-          // onClick={navigateToCart}
+          onClick={navigateToCart}
 
           >
 
             <FaShoppingCart style={cartIconStyle} />
-            {cartItems > 0 && <span style={cartBadgeStyle}>{cartItems}</span>}
+            {cart.length > 0 && <span style={cartBadgeStyle}>{cart.length}</span>}
           </div>
+         
+         
+          {/* <button onClick={navigateToCart} style={cartButtonStyle}>
+        🛒 Cart
+        {cart.length > 0 && <span style={badgeStyle}>{cart.length}</span>}
+      </button> */}
+
+
+
         </div>
       </header>
     );

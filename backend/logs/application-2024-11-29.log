@@ -1,0 +1,14 @@
+2024-11-29 00:02:40 [info]: GET /products?subcategory=Mobile+Phones 500 27 - 11.924 ms
+2024-11-29 00:03:09 [info]: GET /products?subcategory=Laptops 500 27 - 15.127 ms
+2024-11-29 00:04:01 [info]: GET /src/components/logo/logo4.png 404 30 - 0.400 ms
+2024-11-29 00:04:01 [info]: GET /products/recents 200 9442 - 190.977 ms
+2024-11-29 00:04:01 [info]: GET /products/recents 304 - - 5.577 ms
+2024-11-29 00:10:07 [info]: GET /products/recents 304 - - 3.687 ms
+2024-11-29 00:10:07 [info]: GET /products/recents 304 - - 4.953 ms
+2024-11-29 00:10:07 [info]: GET /src/components/logo/logo4.png 404 30 - 5.188 ms
+2024-11-29 23:15:58 [info]: GET /products/recents 500 27 - 18.736 ms
+2024-11-29 23:15:58 [info]: GET /products/recents 500 27 - 11.836 ms
+2024-11-29 23:15:58 [info]: GET /src/components/logo/logo4.png 404 30 - 2.118 ms
+2024-11-29 23:19:38 [info]: GET /products/recents 200 9442 - 67.939 ms
+2024-11-29 23:19:38 [info]: GET /products/recents 304 - - 4.190 ms
+2024-11-29 23:19:38 [info]: GET /src/components/logo/logo4.png 404 30 - 1.072 ms

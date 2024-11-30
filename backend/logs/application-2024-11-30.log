@@ -1,0 +1,4 @@
+2024-11-30 05:25:40 [info]: GET /products/recents 304 - - 12.928 ms
+2024-11-30 05:25:40 [info]: GET /products/recents 304 - - 3.348 ms
+2024-11-30 05:25:40 [info]: GET /src/components/logo/logo4.png 404 30 - 0.893 ms
+2024-11-30 05:35:04 [info]: GET /products/recents 304 - - 1.834 ms

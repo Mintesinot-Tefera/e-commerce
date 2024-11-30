@@ -44,93 +44,93 @@ const ProductListWithDetails = () => {
       ],
     },
     {
-        name: 'Beauty',
-        subcategories: [
-          { name: 'Skincare' },
-          { name: 'Makeup' },
-          { name: 'Hair Care' },
-        ],
-      },
-      {
-        name: 'Health & Wellness',
-        subcategories: [
-          { name: 'Vitamins & Supplements' },
-          { name: 'Fitness Equipment' },
-          { name: 'Personal Care' },
-        ],
-      },
-      {
-        name: 'Sports & Outdoors',
-        subcategories: [
-          { name: 'Sports Equipment' },
-          { name: 'Outdoor Recreation' },
-        ],
-      },
-      {
-        name: 'Toys & Games',
-        subcategories: [
-          { name: 'Action Figures' },
-          { name: 'Educational Toys' },
-          { name: 'Board Games' },
-        ],
-      },
-      {
-        name: 'Books & Stationery',
-        subcategories: [
-          { name: 'Fiction' },
-          { name: 'Non-Fiction' },
-          { name: 'Office Supplies' },
-        ],
-      },
+      name: 'Beauty',
+      subcategories: [
+        { name: 'Skincare' },
+        { name: 'Makeup' },
+        { name: 'Hair Care' },
+      ],
+    },
+    {
+      name: 'Health & Wellness',
+      subcategories: [
+        { name: 'Vitamins & Supplements' },
+        { name: 'Fitness Equipment' },
+        { name: 'Personal Care' },
+      ],
+    },
+    {
+      name: 'Sports & Outdoors',
+      subcategories: [
+        { name: 'Sports Equipment' },
+        { name: 'Outdoor Recreation' },
+      ],
+    },
+    {
+      name: 'Toys & Games',
+      subcategories: [
+        { name: 'Action Figures' },
+        { name: 'Educational Toys' },
+        { name: 'Board Games' },
+      ],
+    },
+    {
+      name: 'Books & Stationery',
+      subcategories: [
+        { name: 'Fiction' },
+        { name: 'Non-Fiction' },
+        { name: 'Office Supplies' },
+      ],
+    },
 
-      {
-        name: 'Automotive',
-        subcategories: [
-          { name: 'Car Accessories' },
-          { name: 'Tools & Equipment' },
-          { name: 'Motorcycle Gear' },
-        ],
-      },
-      {
-        name: 'Grocery & Food',
-        subcategories: [
-          { name: 'Snacks' },
-          { name: 'Beverages' },
-          { name: 'Organic Products' },
-        ],
-      },
-      {
-        name: 'Jewelry & Watches',
-        subcategories: [
-          { name: 'Necklaces' },
-          { name: 'Bracelets' },
-          { name: 'Watches' },
-        ],
-      },
-      {
-        name: 'Baby Products',
-        subcategories: [
-          { name: 'Baby Clothing' },
-          { name: 'Diapers' },
-          { name: 'Toys' },
-        ],
-      },
-      {
-        name: 'Office Supplies',
-        subcategories: [
-          { name: 'Printers' },
-          { name: 'Paper Products' },
-          { name: 'Writing Instruments' },
-        ],
-      },
-      {
-        name: 'Arts & Crafts',
-        subcategories: [
-          { name: 'Painting Supplies' },
-          { name: 'Craft Kits' },
-          { name: 'DIY Tools' },
-        ],
-      },
+    {
+      name: 'Automotive',
+      subcategories: [
+        { name: 'Car Accessories' },
+        { name: 'Tools & Equipment' },
+        { name: 'Motorcycle Gear' },
+      ],
+    },
+    {
+      name: 'Grocery & Food',
+      subcategories: [
+        { name: 'Snacks' },
+        { name: 'Beverages' },
+        { name: 'Organic Products' },
+      ],
+    },
+    {
+      name: 'Jewelry & Watches',
+      subcategories: [
+        { name: 'Necklaces' },
+        { name: 'Bracelets' },
+        { name: 'Watches' },
+      ],
+    },
+    {
+      name: 'Baby Products',
+      subcategories: [
+        { name: 'Baby Clothing' },
+        { name: 'Diapers' },
+        { name: 'Toys' },
+      ],
+    },
+    {
+      name: 'Office Supplies',
+      subcategories: [
+        { name: 'Printers' },
+        { name: 'Paper Products' },
+        { name: 'Writing Instruments' },
+      ],
+    },
+    {
+      name: 'Arts & Crafts',
+      subcategories: [
+        { name: 'Painting Supplies' },
+        { name: 'Craft Kits' },
+        { name: 'DIY Tools' },
+      ],
+    },
 
   ];
 
@@ -165,6 +165,16 @@ const ProductListWithDetails = () => {
     setSelectedProduct(product);
   };
 
+  //   const handleAddToCart = () => {
+  //     // onAddToCart(product, quantity);
+  // };
+
+  const handleAddToCart = (product) => {
+    // console.log("Added to cart:", product);
+    // onAddToCart(product, quantity);
+
+  };
+
   const handleSubcategoryClick = (subcategoryName) => {
     setSelectedProduct(null); // Reset product details view
     fetchProducts(subcategoryName); // Fetch products by subcategory
@@ -188,15 +198,15 @@ const ProductListWithDetails = () => {
       {/* Main Content Area */}
       <main style={{ width: '80%', padding: '20px' }}>
         {selectedProduct ? (
-          <ProductDetails 
-          product={selectedProduct} 
-          onBack={handleBackToProducts}
-          onAddToCart={addToCart} />
+          <ProductDetails
+            product={selectedProduct}
+            onBack={handleBackToProducts}
+            onAddToCart={addToCart} />
         ) : (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
             {products.map((product) => (
               <div key={product.id} onClick={() => handleProductClick(product)}>
-                <ProductCard product={product} />
+                <ProductCard product={product} onAddToCart={handleAddToCart} />
               </div>
             ))}
           </div>

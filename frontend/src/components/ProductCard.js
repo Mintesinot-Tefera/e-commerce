@@ -2,7 +2,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 const ProductCard = 
-({ product }) => {
+({ product, onAddToCart }) => {
 
   const productCardStyle = {
     backgroundColor: '#e6f7e9',
@@ -62,6 +62,12 @@ const ProductCard =
     marginTop: '10px',
   };
 
+
+  const handleAddToCart = () => {
+    // onAddToCart(product, quantity);
+};
+
+
   const handleMouseOver = (e) => {
     e.target.style.backgroundColor = '#05014a';
   };
@@ -102,6 +108,11 @@ const ProductCard =
         style={addToCartButtonStyle}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
+
+        onClick={(e) => {
+          e.stopPropagation(); // Prevents the click event from bubbling
+          onAddToCart(product);
+        }}
       >
         Add to Cart
       </button>

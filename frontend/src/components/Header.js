@@ -31,10 +31,15 @@ const Header =
 
   
     const headerStyle = {
+      position: 'fixed',       // Makes the header fixed
+      top: 0,                 // Aligns it to the top
+      left: 0,                // Aligns it to the left
+      width: '100%',          // Makes the header span the full width
+      zIndex: 1000,           // Keeps it above other elements 
       backgroundColor: '#004d4d',
       // backgroundColor: '#009900',
       color: '#fff',
-      padding: '15px 20px',
+      padding: '5px 20px 5px 20px',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',

@@ -2,3 +2,11 @@
 2024-11-30 05:25:40 [info]: GET /products/recents 304 - - 3.348 ms
 2024-11-30 05:25:40 [info]: GET /src/components/logo/logo4.png 404 30 - 0.893 ms
 2024-11-30 05:35:04 [info]: GET /products/recents 304 - - 1.834 ms
+2024-11-30 05:39:20 [info]: GET /products/recents 304 - - 7.020 ms
+2024-11-30 05:39:20 [info]: GET /products/recents 304 - - 2.840 ms
+2024-11-30 05:39:20 [info]: GET /products/recents 304 - - 1.687 ms
+2024-11-30 05:39:34 [info]: GET /products/recents 304 - - 2.653 ms
+2024-11-30 05:39:34 [info]: GET /products/recents 304 - - 4.762 ms
+2024-11-30 05:39:34 [info]: GET /src/components/logo/logo4.png 404 30 - 0.425 ms
+2024-11-30 05:41:12 [info]: GET /products/recents 304 - - 3.130 ms
+2024-11-30 05:41:12 [info]: GET /products/recents 304 - - 2.867 ms

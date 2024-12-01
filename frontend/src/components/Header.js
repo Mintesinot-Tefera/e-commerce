@@ -24,12 +24,15 @@ const Header =
     const { cart } = useContext(CartContext);
     const navigate = useNavigate();
 
-  // Define the navigateToCart method
-  const navigateToCart = () => {
-    navigate('/cart'); // Navigate to the cart page
-  };
 
-  
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    // Define the navigateToCart method
+    const navigateToCart = () => {
+      navigate('/cart'); // Navigate to the cart page
+    };
+
+
     const headerStyle = {
       position: 'fixed',       // Makes the header fixed
       top: 0,                 // Aligns it to the top
@@ -201,15 +204,18 @@ const Header =
           <Link href="/signup"> <span style={{ color: '#fff', cursor: 'pointer' }}> Sign Up</span> </Link>
 
           <div style={cartContainerStyle}
-          onClick={navigateToCart}
+            onClick={navigateToCart}
 
           >
 
             <FaShoppingCart style={cartIconStyle} />
-            {cart.length > 0 && <span style={cartBadgeStyle}>{cart.length}</span>}
+            {/* {cart.length > 0 && <span style={cartBadgeStyle}>{cart.length}</span>} */}
+            {cart.length > 0 && <span style={cartBadgeStyle}>{totalItems}</span>}
+
+
           </div>
-         
-         
+
+
           {/* <button onClick={navigateToCart} style={cartButtonStyle}>
         🛒 Cart
         {cart.length > 0 && <span style={badgeStyle}>{cart.length}</span>}

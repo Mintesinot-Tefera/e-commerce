@@ -172,7 +172,7 @@ const ProductListWithDetails = () => {
   const handleAddToCart = (product) => {
     // console.log("Added to cart:", product);
     // onAddToCart(product, quantity);
-
+    addToCart()
   };
 
   const handleSubcategoryClick = (subcategoryName) => {
@@ -206,7 +206,7 @@ const ProductListWithDetails = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
             {products.map((product) => (
               <div key={product.id} onClick={() => handleProductClick(product)}>
-                <ProductCard product={product} onAddToCart={handleAddToCart} />
+                <ProductCard product={product} onAddToCart={addToCart} />
               </div>
             ))}
           </div>

@@ -17,7 +17,6 @@ function App() {
   const addToCart = (product, quantity = 1) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
-
       if (existingItem) {
         return prevCart.map((item) =>
           item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
@@ -31,21 +30,21 @@ function App() {
   return (
     <CartContext.Provider value={{ cart, addToCart }}>
 
-    <div className="App">
-      {/* <div>Hello</div>
+      <div className="App">
+        {/* <div>Hello</div>
       <HomePage /> */}
 
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route exact path="/signin" element={<SignIn />} />
-        <Route exact path="/signup" element={<SignUp />} />
-        <Route path="/cart" element={<CartPage/>} />
-        
-        {/* <Route path="/cart" element={<CartPage cartItems={cartItems} />} /> */}
-      </Routes>
-    </Router>
-    </div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route exact path="/signin" element={<SignIn />} />
+            <Route exact path="/signup" element={<SignUp />} />
+            <Route path="/cart" element={<CartPage />} />
+
+            {/* <Route path="/cart" element={<CartPage cartItems={cartItems} />} /> */}
+          </Routes>
+        </Router>
+      </div>
     </CartContext.Provider>
   );
 }

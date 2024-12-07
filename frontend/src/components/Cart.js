@@ -220,7 +220,7 @@
 
 
 
-// // CartPage.js
+// CartPage.js
 // import React from 'react';
 
 // const CartPage = ({ cartItems }) => {
@@ -248,3 +248,167 @@
 
 // export default CartPage;
 
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+
+// const Cart = ({ cartItems, onUpdateQuantity, onCheckout }) => {
+//   const [localCart, setLocalCart] = useState(cartItems);
+
+//   // Update quantity locally and trigger parent update
+//   const handleQuantityChange = (productId, newQuantity) => {
+//     const updatedCart = localCart.map((item) =>
+//       item.id === productId
+//         ? { ...item, quantity: newQuantity }
+//         : item
+//     );
+
+//     setLocalCart(updatedCart);
+//     onUpdateQuantity(productId, newQuantity); // Notify parent
+//   };
+
+//   // Calculate the total price
+//   const calculateTotal = () => {
+//     return localCart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+//   };
+
+//   return (
+//     <div style={{ padding: '20px' }}>
+//       <h1>Cart</h1>
+//       {localCart.length > 0 ? (
+//         <div>
+//           {localCart.map((item) => (
+//             <div
+//               key={item.id}
+//               style={{
+//                 display: 'flex',
+//                 alignItems: 'center',
+//                 marginBottom: '20px',
+//                 padding: '10px',
+//                 border: '1px solid #ddd',
+//                 borderRadius: '8px',
+//               }}
+//             >
+//               {/* Product Image */}
+//               <img
+//                 src={item.imageUrl}
+//                 alt={item.name}
+//                 style={{
+//                   width: '80px',
+//                   height: '80px',
+//                   objectFit: 'cover',
+//                   borderRadius: '8px',
+//                   marginRight: '20px',
+//                 }}
+//               />
+
+//               {/* Product Details */}
+//               <div style={{ flex: 1 }}>
+//                 <h3>{item.name}</h3>
+//                 <p>Price: ${item.price}</p>
+//               </div>
+
+//               {/* Quantity Selector */}
+//               <div>
+//                 <label htmlFor={`quantity-${item.id}`}>Quantity:</label>
+//                 <input
+//                   id={`quantity-${item.id}`}
+//                   type="number"
+//                   value={item.quantity}
+//                   min="1"
+//                   onChange={(e) => handleQuantityChange(item.id, Number(e.target.value))}
+//                   style={{
+//                     width: '60px',
+//                     marginLeft: '10px',
+//                     padding: '5px',
+//                     borderRadius: '4px',
+//                     border: '1px solid #ddd',
+//                   }}
+//                 />
+//               </div>
+//             </div>
+//           ))}
+
+//           {/* Total Price */}
+//           <h2>Total: ${calculateTotal()}</h2>
+
+//           {/* Checkout Button */}
+//           <button
+//             onClick={onCheckout}
+//             style={{
+//               padding: '10px 20px',
+//               backgroundColor: '#092f6e',
+//               color: '#ffffff',
+//               border: 'none',
+//               borderRadius: '4px',
+//               cursor: 'pointer',
+//             }}
+//           >
+//             Checkout
+//           </button>
+//         </div>
+//       ) : (
+//         <p>Your cart is empty.</p>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Cart;
+
+
+
+import React from 'react';
+
+const Cart = ({ cartItems, onUpdateQuantity, onCheckout }) => {
+  const calculateTotal = () =>
+    cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+
+  return (
+    <div>
+      <h1>Cart</h1>
+      {cartItems.length > 0 ? (
+        <>
+          {cartItems.map((item) => (
+            <div key={item.id} style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+              <img
+                src={item.imageUrl1}
+                alt={item.name}
+                style={{ width: '80px', height: '80px', marginRight: '20px', borderRadius: '8px' }}
+              />
+              <div style={{ flex: 1 }}>
+                <h3>{item.name}</h3>
+                <p>Price: ${item.price}</p>
+              </div>
+              <div>
+                <label>Quantity:</label>
+                <input
+                  type="number"
+                  value={item.quantity}
+                  min="1"
+                  onChange={(e) => onUpdateQuantity(item.id, Number(e.target.value))}
+                  style={{ marginLeft: '10px', width: '60px' }}
+                />
+              </div>
+            </div>
+          ))}
+          <h2>Total: ${calculateTotal()}</h2>
+          <button onClick={onCheckout} style={{ padding: '10px 20px', backgroundColor: '#092f6e', color: '#fff' }}>
+            Checkout
+          </button>
+        </>
+      ) : (
+        <p>Your cart is empty.</p>
+      )}
+    </div>
+  );
+};
+
+export default Cart;

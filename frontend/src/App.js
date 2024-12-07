@@ -2,9 +2,6 @@
 import React, { useState, createContext } from "react";
 import HomePage from "./components/HomePage";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
-import ProductCard from './components/ProductCard';
-import ProductDetailPage from './components/ProductDetailPage';
-import CartPage from "./components/CartPage";
 import SignIn from './authentication/SignIn';
 import SignUp from './authentication/SignUp';
 
@@ -13,6 +10,7 @@ export const CartContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
+
 
   const addToCart = (product, quantity = 1) => {
     setCart((prevCart) => {
@@ -36,10 +34,10 @@ function App() {
 
         <Router>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage/>} />
             <Route exact path="/signin" element={<SignIn />} />
             <Route exact path="/signup" element={<SignUp />} />
-            <Route path="/cart" element={<CartPage />} />
+            {/* <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateQuantity={updateQuantity} onCheckout={handleCheckout}/>} /> */}
 
             {/* <Route path="/cart" element={<CartPage cartItems={cartItems} />} /> */}
           </Routes>

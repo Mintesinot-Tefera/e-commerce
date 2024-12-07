@@ -1,23 +1,16 @@
 import React, { useState, useContext } from 'react';
 import { FaShoppingCart } from 'react-icons/fa'; // Import cart icon
-import myLogo from './logo/logo.png';
-import myLogo2 from './logo/logo1.png';
-import myLogo3 from './logo/logo2.png';
-import myLogo4 from './logo/logo3.png';
+// import myLogo from './logo/logo.png';
+// import myLogo2 from './logo/logo1.png';
+// import myLogo3 from './logo/logo2.png';
+// import myLogo4 from './logo/logo3.png';
 import myLogo5 from './logo/logo4.png';
 import { CartContext } from '../App';
-
-
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import CartPage from './CartPage';
 import Link from '@mui/joy/Link';
 
 
-
-
-const Header =
-
-  () => {
+const Header =({navigateToCart}) => {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     // const [cartItems, setCartItems] = useState(3); // Sample cart items count
 
@@ -28,9 +21,9 @@ const Header =
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     // Define the navigateToCart method
-    const navigateToCart = () => {
-      navigate('/cart'); // Navigate to the cart page
-    };
+    // const navigateToCart = () => {
+    //   navigate('/cart'); // Navigate to the cart page
+    // };
 
 
     const headerStyle = {

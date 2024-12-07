@@ -2,33 +2,35 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import ProductCard from './ProductCard';
 import AdvertisingCard from './AdvertisingCard';
 import WelcomeBox from './WelcomeBox';
 import ProductListWithDetails from './ProductListWithDetails';
-import CartPage from './CartPage';
 
 const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [cartItems, setCartItems] = useState([]);
-  const [showCartPage, setShowCartPage] = useState(false);
+
+  
+  const [showCart, setShowCart] = useState(false); // Cart visibility state
+  const navigateToCart = () => setShowCart(true);
+  const backToProducts = () => setShowCart(false);
 
 
-  const handleAddToCart = (product) => {
-    setCartItems((prevCartItems) => {
-      const existingItem = prevCartItems.find((item) => item.id === product.id);
-      if (existingItem) {
-        return prevCartItems.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-        );
-      }
-      return [...prevCartItems, { ...product, quantity: 1 }];
-    });
-  };
+  // const handleAddToCart = (product) => {
+  //   setCartItems((prevCartItems) => {
+  //     const existingItem = prevCartItems.find((item) => item.id === product.id);
+  //     if (existingItem) {
+  //       return prevCartItems.map((item) =>
+  //         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+  //       );
+  //     }
+  //     return [...prevCartItems, { ...product, quantity: 1 }];
+  //   });
+  // };
 
-  const handleCartIconClick = () => {
-    setShowCartPage((prevState) => !prevState);
-  };
+  // const handleCartIconClick = () => {
+  //   setShowCartPage((prevState) => !prevState);
+  // };
 
   const cartItemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
 
@@ -36,9 +38,9 @@ const HomePage = () => {
   //   ? allProducts 
   //   : allProducts.filter((product) => product.category === selectedCategory);
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-  };
+  // const handleCategoryChange = (category) => {
+  //   setSelectedCategory(category);
+  // };
 
   const homepageStyle = {
     padding: '20px 0 20px 0',
@@ -75,7 +77,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Header />
+      <Header navigateToCart={navigateToCart} />
       <div style={homepageStyle}>
         <AdvertisingCard />
         <WelcomeBox />
@@ -96,7 +98,7 @@ const HomePage = () => {
 
         {/* <ProductListWithDetails products={allProducts} categories={categories} /> */}
 
-        <ProductListWithDetails/>
+        <ProductListWithDetails showCart={showCart} backToProducts={backToProducts}/>
 
         {/* <Sidebar categories={categories} /> */}
 

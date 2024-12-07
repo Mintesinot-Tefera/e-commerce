@@ -5,14 +5,20 @@ import axios from 'axios';
 import Sidebar from './Sidebar';
 import { useContext } from 'react';
 import { CartContext } from '../App';
+import Cart from './Cart';
 
 
-const ProductListWithDetails = () => {
+const ProductListWithDetails = ({showCart, backToProducts}) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [products, setProducts] = useState([]); // State for products
   const [error, setError] = useState(null); // State for errors
 
-  const { addToCart } = useContext(CartContext);
+  // const { addToCart } = useContext(CartContext);
+
+  // const [showCart, setShowCart] = useState(false); // State to show the cart page
+  const { cart, addToCart, updateQuantity } = useContext(CartContext);
+
+
 
 
   const categories = [
@@ -163,6 +169,8 @@ const ProductListWithDetails = () => {
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
+    backToProducts();
+    // setShowCart(false); 
   };
 
   //   const handleAddToCart = () => {
@@ -178,9 +186,18 @@ const ProductListWithDetails = () => {
   const handleSubcategoryClick = (subcategoryName) => {
     setSelectedProduct(null); // Reset product details view
     fetchProducts(subcategoryName); // Fetch products by subcategory
+    backToProducts();
+
   };
 
   const handleBackToProducts = () => {
+    setSelectedProduct(null);
+    backToProducts();
+    // setShowCart(false);
+  };
+
+  const navigateToCart = () => {
+    // setShowCart(true); // Show the cart page
     setSelectedProduct(null);
   };
 
@@ -197,7 +214,16 @@ const ProductListWithDetails = () => {
 
       {/* Main Content Area */}
       <main style={{ width: '80%', padding: '20px' }}>
-        {selectedProduct ? (
+
+      {showCart ? (
+          <Cart
+            cartItems={cart}
+            onUpdateQuantity={updateQuantity}
+            onCheckout={() => alert('Checkout Complete!')}
+          />
+        ) : selectedProduct ? (
+
+
           <ProductDetails
             product={selectedProduct}
             onBack={handleBackToProducts}

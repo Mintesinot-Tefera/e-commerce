@@ -373,7 +373,7 @@ const Cart = ({ cartItems, onUpdateQuantity, onCheckout }) => {
 
   return (
     <div>
-      <h1>Cart</h1>
+      <h2>My Cart</h2>
       {cartItems.length > 0 ? (
         <>
           {cartItems.map((item) => (

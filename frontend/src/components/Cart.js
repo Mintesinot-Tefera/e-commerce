@@ -399,7 +399,7 @@ const Cart = ({ cartItems, onUpdateQuantity, onCheckout }) => {
               </div>
             </div>
           ))}
-          <h2>Total: ${calculateTotal()}</h2>
+          <h3>Total: ${calculateTotal()}</h3>
           <button onClick={onCheckout} style={{ padding: '10px 20px', backgroundColor: '#092f6e', color: '#fff' }}>
             Checkout
           </button>

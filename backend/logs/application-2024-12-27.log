@@ -1,0 +1,13 @@
+2024-12-27 22:54:19 [info]: GET /products/recents 304 - - 177.288 ms
+2024-12-27 22:54:19 [info]: GET /products/recents 304 - - 24.349 ms
+2024-12-27 22:54:22 [info]: GET /src/components/logo/logo4.png 404 30 - 12.605 ms
+2024-12-27 22:54:35 [info]: POST /create-checkout-session 404 30 - 1.129 ms
+2024-12-27 22:54:35 [info]: POST /create-checkout-session 404 30 - 1.396 ms
+2024-12-27 22:54:35 [info]: POST /create-checkout-session 404 30 - 0.965 ms
+2024-12-27 22:54:36 [info]: POST /create-checkout-session 404 30 - 1.167 ms
+2024-12-27 22:55:01 [info]: GET /products/recents 304 - - 29.523 ms
+2024-12-27 22:55:01 [info]: GET /products/recents 304 - - 13.819 ms
+2024-12-27 22:55:03 [info]: GET /src/components/logo/logo4.png 404 30 - 1.308 ms
+2024-12-27 22:55:48 [info]: GET /products/recents 200 4221 - 86.391 ms
+2024-12-27 22:55:48 [info]: GET /products/recents 304 - - 27.156 ms
+2024-12-27 22:55:49 [info]: GET /src/components/logo/logo4.png 404 30 - 1.338 ms

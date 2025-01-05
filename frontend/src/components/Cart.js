@@ -366,10 +366,68 @@
 
 
 import React from 'react';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51MsjC5BfmcVjdYhujzvYQcYO331Zsp9bb5FtM3alDgzxeKm2aaA1iAm1VXrUdaJr610iMovSFjzZiMPUru7GTtTY00wkeZlwwV'); // Public Key from Stripe Dashboard
+
+
 
 const Cart = ({ cartItems, onUpdateQuantity, onCheckout }) => {
+
+
   const calculateTotal = () =>
     cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+
+
+  // const handleCheckout = async () => {
+  //   try {
+  //     const response = await fetch('http://localhost:5000/create-checkout-session', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({ cartItems }),
+  //     });
+  
+  //     const { id } = await response.json();
+  //     const stripe = await stripePromise;
+  //     await stripe.redirectToCheckout({ sessionId: id });
+  //   } catch (error) {
+  //     console.error('Error during checkout:', error);
+  //   }
+  // };
+  
+  
+  
+  
+  
+  const handleCheckout = async () => {
+console.log(cartItems);
+
+    try {
+      const response = await fetch('http://localhost:5000/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cartItems }), // Pass cart data to the backend
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to create checkout session');
+      }
+  
+      const { id } = await response.json(); // Extract session ID from response
+  
+      const stripe = await stripePromise;
+      if (!stripe) {
+        throw new Error('Stripe.js has not been loaded');
+      }
+  
+      // Redirect to Stripe Checkout
+      await stripe.redirectToCheckout({ sessionId: id });
+    } catch (error) {
+      console.error('Error during checkout:', error);
+    }
+  };
+  
+
 
   return (
     <div>
@@ -400,7 +458,8 @@ const Cart = ({ cartItems, onUpdateQuantity, onCheckout }) => {
             </div>
           ))}
           <h3>Total: ${calculateTotal()}</h3>
-          <button onClick={onCheckout} style={{ padding: '10px 20px', backgroundColor: '#092f6e', color: '#fff' }}>
+          <button onClick={handleCheckout} 
+            style={{ padding: '10px 20px', backgroundColor: '#092f6e', color: '#fff' }}>
             Checkout
           </button>
         </>

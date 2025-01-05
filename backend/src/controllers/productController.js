@@ -185,11 +185,6 @@ const updateProduct = async (req, res) => {
 };
 
 
-
-
-
-
-
 // Delete a product (Admin only)
 const deleteProduct = async (req, res) => {
     const productId = req.params.id;

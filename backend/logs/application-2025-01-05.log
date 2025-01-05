@@ -1,0 +1,8 @@
+2025-01-05 20:48:50 [info]: GET /products/recents 500 27 - 43.004 ms
+2025-01-05 20:48:51 [info]: GET /products/recents 500 27 - 30.990 ms
+2025-01-05 20:48:55 [info]: GET /src/components/logo/logo4.png 404 30 - 4.012 ms
+2025-01-05 20:51:53 [info]: GET /products/recents 200 4221 - 297.050 ms
+2025-01-05 20:51:53 [info]: GET /products/recents 304 - - 21.522 ms
+2025-01-05 20:52:05 [info]: GET /src/components/logo/logo4.png 404 30 - 1.316 ms
+2025-01-05 20:54:16 [info]: POST /create-checkout-session 200 75 - 1495.496 ms
+2025-01-05 20:55:06 [info]: GET /src/components/logo/logo4.png 404 30 - 0.943 ms

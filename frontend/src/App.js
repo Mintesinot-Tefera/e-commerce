@@ -5,12 +5,10 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import SignIn from './authentication/SignIn';
 import SignUp from './authentication/SignUp';
 
-
 export const CartContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
-
 
   const addToCart = (product, quantity = 1) => {
     setCart((prevCart) => {

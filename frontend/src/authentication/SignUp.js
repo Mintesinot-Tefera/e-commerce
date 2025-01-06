@@ -16,6 +16,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import FormHelperText from '@mui/joy/FormHelperText';
 import Link from '@mui/joy/Link';
+import axios from 'axios';
+
 
 
 
@@ -88,27 +90,27 @@ export default function SignUp() {
     };
 
     const handleSubmit = async (event) => {
-        // event.preventDefault();
-        // const newErrors = validate();
-        // if (Object.keys(newErrors).length > 0) {
-        //     setErrors(newErrors);
-        // } else {
-        //     try {
-        //         const response = await axios.post('http://localhost:5000/user/register', {
-        //             email: formData.email,
-        //             fullname: formData.fullname,
-        //             password: formData.password,
-        //         });
-        //         alert(response.data.message);
-        //         navigate('/');
-        //     } catch (error) {
-        //         if (error.response && error.response.data) {
-        //             alert(error.response.data.message);
-        //         } else {
-        //             alert('There was an error registering!');
-        //         }
-        //     }
-        // }
+        event.preventDefault();
+        const newErrors = validate();
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+        } else {
+            try {
+                const response = await axios.post('http://localhost:5000/auth/register', {
+                    email: formData.email,
+                    fullname: formData.fullname,
+                    password: formData.password,
+                });
+                alert(response.data.message);
+                navigate('/');
+            } catch (error) {
+                if (error.response && error.response.data) {
+                    alert(error.response.data.message);
+                } else {
+                    alert('There was an error registering!');
+                }
+            }
+        }
     };
 
 

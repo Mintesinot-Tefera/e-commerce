@@ -1,0 +1,34 @@
+2025-01-06 04:27:15 [info]: GET /products?subcategory=Mobile+Phones 304 - - 41.605 ms
+2025-01-06 04:29:07 [info]: GET /src/components/logo/logo4.png 404 30 - 2.692 ms
+2025-01-06 04:29:42 [info]: GET /src/components/logo/logo4.png 404 30 - 2.301 ms
+2025-01-06 04:32:48 [info]: GET /src/components/logo/logo4.png 404 30 - 1.323 ms
+2025-01-06 04:35:52 [info]: GET /src/components/logo/logo4.png 404 30 - 1.299 ms
+2025-01-06 04:36:18 [info]: GET /src/components/logo/logo4.png 404 30 - 1.521 ms
+2025-01-06 04:36:38 [info]: GET /src/components/logo/logo4.png 404 30 - 1.472 ms
+2025-01-06 04:43:59 [info]: GET /src/components/logo/logo4.png 404 30 - 1.470 ms
+2025-01-06 04:44:04 [info]: GET /src/components/logo/logo4.png 404 30 - 1.081 ms
+2025-01-06 04:44:11 [info]: GET /src/components/logo/logo4.png 404 30 - 1.667 ms
+2025-01-06 04:46:14 [info]: GET /src/components/logo/logo4.png 404 30 - 1.769 ms
+2025-01-06 04:46:18 [info]: GET /src/components/logo/logo4.png 404 30 - 2.894 ms
+2025-01-06 04:46:20 [info]: GET /src/components/logo/logo4.png 404 30 - 1.368 ms
+2025-01-06 04:46:23 [info]: GET /src/components/logo/logo4.png 404 30 - 1.545 ms
+2025-01-06 04:46:26 [info]: GET /src/components/logo/logo4.png 404 30 - 14.970 ms
+2025-01-06 04:46:28 [info]: GET /src/components/logo/logo4.png 404 30 - 1.354 ms
+2025-01-06 04:46:30 [info]: GET /src/components/logo/logo4.png 404 30 - 0.870 ms
+2025-01-06 04:46:36 [info]: GET /src/components/logo/logo4.png 404 30 - 8.496 ms
+2025-01-06 04:46:39 [info]: GET /src/components/logo/logo4.png 404 30 - 1.934 ms
+2025-01-06 04:46:41 [info]: GET /src/components/logo/logo4.png 404 30 - 2.349 ms
+2025-01-06 04:52:45 [info]: GET /src/components/logo/logo4.png 404 30 - 1.396 ms
+2025-01-06 04:53:04 [info]: POST /user/login 404 30 - 1.450 ms
+2025-01-06 04:54:35 [warn]: Login attempt with non-existent email: mt@gmail.com
+2025-01-06 04:54:35 [info]: POST /auth/login 400 40 - 49.512 ms
+2025-01-06 04:54:39 [warn]: Login attempt with non-existent email: mt@gmail.com
+2025-01-06 04:54:39 [info]: POST /auth/login 400 40 - 33.530 ms
+2025-01-06 04:54:48 [info]: GET /src/components/logo/logo4.png 404 30 - 0.862 ms
+2025-01-06 04:55:06 [info]: GET /src/components/logo/logo4.png 404 30 - 0.588 ms
+2025-01-06 04:56:11 [info]: POST /user/register 404 30 - 0.784 ms
+2025-01-06 04:56:55 [info]: POST /auth/register 400 201 - 18.742 ms
+2025-01-06 04:57:36 [info]: POST /auth/register 400 201 - 6.959 ms
+2025-01-06 04:57:46 [info]: GET /src/components/logo/logo4.png 404 30 - 9.526 ms
+2025-01-06 04:57:51 [info]: GET /src/components/logo/logo4.png 404 30 - 1.193 ms
+2025-01-06 04:58:07 [info]: POST /auth/register 400 201 - 5.944 ms

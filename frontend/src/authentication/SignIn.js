@@ -20,6 +20,8 @@ import { useNavigate } from 'react-router-dom';
 import GoogleIcon from './GoogleIcon';
 // import myLogo5 from '../components/logo/logo4.png';
 import myLogo5 from '../components/logo/logo6.png';
+import axios from 'axios';
+
 
 
 
@@ -111,32 +113,32 @@ export default function SignIn() {
 
 
     const handleSubmit = async (event) => {
-        // event.preventDefault();
-        // const newErrors = validate();
-        // if (Object.keys(newErrors).length > 0) {
-        //     setErrors(newErrors);
-        // } else {
-        //     try {
-        //         const response = await axios.post('http://localhost:5000/user/login', formData);
-        //         // sessionStorage.setItem('user_logged_in', 'true');
-        //         if (response.data.authToken) {
-        //             sessionStorage.setItem('fullname', response.data.fullname);  // Store the fullname in sessionStorage
-        //             sessionStorage.setItem('authToken', response.data.authToken);  // Store the token in sessionStorage
-        //             navigate('/userdashboard');  // Navigate to the dashboard
+        event.preventDefault();
+        const newErrors = validate();
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+        } else {
+            try {
+                const response = await axios.post('http://localhost:5000/auth/login', formData);
+                // sessionStorage.setItem('user_logged_in', 'true');
+                if (response.data.authToken) {
+                    sessionStorage.setItem('fullname', response.data.fullname);  // Store the fullname in sessionStorage
+                    sessionStorage.setItem('authToken', response.data.authToken);  // Store the token in sessionStorage
+                    navigate('/userdashboard');  // Navigate to the dashboard
 
-        //         }
-        //         // sessionStorage.setItem('authToken', response.data.token);
-        //         // navigate('/userdashboard');
+                }
+                // sessionStorage.setItem('authToken', response.data.token);
+                // navigate('/userdashboard');
 
-        //     } catch (error) {
-        //         console.error('There was an error logging in!', error);
-        //         if (error.response && error.response.data) {
-        //             setServerError(error.response.data.message);
-        //         } else {
-        //             setServerError('There was an error logging in!');
-        //         }
-        //     }
-        // }
+            } catch (error) {
+                console.error('There was an error logging in!', error);
+                if (error.response && error.response.data) {
+                    setServerError(error.response.data.message);
+                } else {
+                    setServerError('There was an error logging in!');
+                }
+            }
+        }
     };
 
     return (

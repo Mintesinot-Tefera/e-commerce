@@ -105,7 +105,7 @@ const login = (req, res) => {
             // Generate JWT
             const payload = {
                 id: user.id,
-                username: user.fullname,
+                fullname: user.fullname,
                 email: user.email,
                 role: user.role
             };
@@ -114,7 +114,10 @@ const login = (req, res) => {
 
             logger.info(`User logged in: ${email} (ID: ${user.id})`);
 
-            return res.status(200).json({ token });
+            // return res.status(200).json({ token });
+
+            return res.status(200).json({ authToken: token, fullname: user.fullname });
+
         } catch (compareError) {
             console.error('Error comparing passwords:', compareError);
             // logger.error(`Error during user login for email ${email}: ${error.stack}`);

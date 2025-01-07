@@ -124,7 +124,7 @@ export default function SignIn() {
                 if (response.data.authToken) {
                     sessionStorage.setItem('fullname', response.data.fullname);  // Store the fullname in sessionStorage
                     sessionStorage.setItem('authToken', response.data.authToken);  // Store the token in sessionStorage
-                    navigate('/userdashboard');  // Navigate to the dashboard
+                    navigate('/');  // Navigate to the dashboard
 
                 }
                 // sessionStorage.setItem('authToken', response.data.token);

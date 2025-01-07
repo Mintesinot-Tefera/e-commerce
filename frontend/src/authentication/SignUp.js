@@ -97,8 +97,8 @@ export default function SignUp() {
         } else {
             try {
                 const response = await axios.post('http://localhost:5000/auth/register', {
-                    email: formData.email,
                     fullname: formData.fullname,
+                    email: formData.email,
                     password: formData.password,
                 });
                 alert(response.data.message);

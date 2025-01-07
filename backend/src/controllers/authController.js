@@ -17,7 +17,7 @@ const query = (sql, values) => {
 };
 
 const register = async (req, res) => {
-    const { username, email, password } = req.body;
+    const { fullname, email, password } = req.body;
 
     // Validate input
     // if (!username || !email || !password) {
@@ -46,8 +46,8 @@ const register = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, saltRounds);
 
         // Insert new user
-        const sql = 'INSERT INTO user (username, email, password) VALUES (?, ?, ?)';
-        const values = [username, email, hashedPassword];
+        const sql = 'INSERT INTO user (fullname, email, password) VALUES (?, ?, ?)';
+        const values = [fullname, email, hashedPassword];
         const result = await query(sql, values);
 
         // db.query(insertUserQuery, [username, email, hashedPassword], (err, result) => {
@@ -62,7 +62,7 @@ const register = async (req, res) => {
 
     } catch (hashError) {
         console.error('Error hashing password:', hashError);
-        logger.error(`Error during user registration for email ${email}: ${error.stack}`);
+        // logger.error(`Error during user registration for email ${email}: ${error.stack}`);
         return res.status(500).json({ message: 'Server error.' });
     }
     // }
@@ -105,7 +105,7 @@ const login = (req, res) => {
             // Generate JWT
             const payload = {
                 id: user.id,
-                username: user.username,
+                username: user.fullname,
                 email: user.email,
                 role: user.role
             };
@@ -117,7 +117,7 @@ const login = (req, res) => {
             return res.status(200).json({ token });
         } catch (compareError) {
             console.error('Error comparing passwords:', compareError);
-            logger.error(`Error during user login for email ${email}: ${error.stack}`);
+            // logger.error(`Error during user login for email ${email}: ${error.stack}`);
             return res.status(500).json({ message: 'Server error.' });
         }
     });

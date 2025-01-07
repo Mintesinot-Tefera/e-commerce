@@ -1,11 +1,11 @@
 const { body, validationResult } = require('express-validator');
 
 const validateRegister = [
-  body('username')
+  body('fullname')
     .notEmpty()
-    .withMessage('Username is required.')
+    .withMessage('Name is required.')
     .isLength({ min: 3 })
-    .withMessage('Username must be at least 3 characters long.'),
+    .withMessage('Name must be at least 3 characters long.'),
 
   body('email')
     .notEmpty()

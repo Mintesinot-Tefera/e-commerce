@@ -1,0 +1,64 @@
+2025-01-07 04:37:58 [info]: GET /src/components/logo/logo4.png 404 30 - 2.722 ms
+2025-01-07 04:38:05 [info]: GET /src/components/logo/logo4.png 404 30 - 1.179 ms
+2025-01-07 04:38:12 [info]: GET /src/components/logo/logo4.png 404 30 - 1.343 ms
+2025-01-07 04:39:15 [info]: POST /create-checkout-session 500 33 - 1190.412 ms
+2025-01-07 04:39:30 [info]: POST /create-checkout-session 500 33 - 1033.684 ms
+2025-01-07 05:05:08 [info]: POST /create-checkout-session 200 75 - 1534.066 ms
+2025-01-07 05:05:12 [info]: POST /create-checkout-session 200 75 - 784.456 ms
+2025-01-07 05:05:52 [info]: POST /create-checkout-session 200 75 - 801.936 ms
+2025-01-07 05:05:58 [info]: GET /products/recents 304 - - 8.653 ms
+2025-01-07 05:05:58 [info]: GET /products/recents 304 - - 14.741 ms
+2025-01-07 05:06:00 [info]: GET /src/components/logo/logo4.png 404 30 - 0.733 ms
+2025-01-07 05:06:11 [info]: POST /create-checkout-session 200 75 - 784.380 ms
+2025-01-07 05:06:31 [info]: GET /src/components/logo/logo4.png 404 30 - 1.545 ms
+2025-01-07 05:06:37 [info]: GET /products/recents 304 - - 9.515 ms
+2025-01-07 05:06:37 [info]: GET /products/recents 304 - - 35.629 ms
+2025-01-07 05:06:38 [info]: GET /src/components/logo/logo4.png 404 30 - 1.446 ms
+2025-01-07 05:06:56 [info]: POST /create-checkout-session 200 75 - 784.260 ms
+2025-01-07 05:07:34 [info]: GET /src/components/logo/logo4.png 404 30 - 1.009 ms
+2025-01-07 05:07:40 [info]: GET /products/recents 304 - - 11.400 ms
+2025-01-07 05:07:40 [info]: GET /products/recents 304 - - 21.656 ms
+2025-01-07 05:07:41 [info]: GET /src/components/logo/logo4.png 404 30 - 9.481 ms
+2025-01-07 05:46:00 [info]: GET /src/components/logo/logo4.png 404 30 - 0.693 ms
+2025-01-07 05:46:07 [warn]: Invalid password attempt for email: mintesinotteferamt@gmail.com
+2025-01-07 05:46:07 [info]: POST /auth/login 400 40 - 44.263 ms
+2025-01-07 05:46:21 [warn]: Invalid password attempt for email: mintesinotteferamt@gmail.com
+2025-01-07 05:46:21 [info]: POST /auth/login 400 40 - 15.999 ms
+2025-01-07 05:46:25 [info]: GET /src/components/logo/logo4.png 404 30 - 1.347 ms
+2025-01-07 05:46:37 [warn]: Invalid password attempt for email: mintesinotteferamt@gmail.com
+2025-01-07 05:46:37 [info]: POST /auth/login 400 40 - 10.679 ms
+2025-01-07 05:48:17 [info]: GET /src/components/logo/logo4.png 404 30 - 1.065 ms
+2025-01-07 05:48:34 [info]: POST /auth/register 400 201 - 15.734 ms
+2025-01-07 06:00:59 [info]: POST /register 404 30 - 9.299 ms
+2025-01-07 06:01:30 [info]: POST /auth/register 400 201 - 33.738 ms
+2025-01-07 06:08:45 [info]: POST /auth/register 400 201 - 40.210 ms
+2025-01-07 06:16:07 [info]: POST /auth/register 400 201 - 22.990 ms
+2025-01-07 06:18:13 [info]: POST /auth/register 400 201 - 40.236 ms
+2025-01-07 06:20:03 [info]: POST /auth/register 400 201 - 37.603 ms
+2025-01-07 06:20:28 [info]: POST /auth/register 400 201 - 14.835 ms
+2025-01-07 07:01:02 [info]: POST /auth/register 400 201 - 13.179 ms
+2025-01-07 07:05:15 [info]: POST /auth/register 400 201 - 8.387 ms
+2025-01-07 07:06:57 [info]: New user registered: mintesinottefera26@gmail.com (ID: 2)
+2025-01-07 07:06:57 [info]: POST /auth/register 201 43 - 359.714 ms
+2025-01-07 07:07:00 [info]: GET /products/recents 304 - - 42.067 ms
+2025-01-07 07:07:00 [info]: GET /products/recents 304 - - 32.054 ms
+2025-01-07 07:09:01 [info]: GET /src/components/logo/logo4.png 404 30 - 13.800 ms
+2025-01-07 07:09:31 [warn]: User registration attempted with existing email: mintesinotteferamt@gmail.com
+2025-01-07 07:09:31 [info]: POST /auth/register 400 50 - 173.478 ms
+2025-01-07 07:11:47 [warn]: User registration attempted with existing email: mintesinottefera26@gmail.com
+2025-01-07 07:11:47 [info]: POST /auth/register 400 50 - 228.193 ms
+2025-01-07 07:14:23 [info]: New user registered: mintesinotteferamt@gmail.com (ID: 5)
+2025-01-07 07:14:24 [info]: POST /auth/register 201 43 - 515.037 ms
+2025-01-07 07:14:26 [info]: GET /products/recents 304 - - 55.189 ms
+2025-01-07 07:14:26 [info]: GET /products/recents 304 - - 27.801 ms
+2025-01-07 07:18:00 [info]: POST /auth/login 500 27 - 420.999 ms
+2025-01-07 07:18:02 [info]: POST /auth/login 500 27 - 338.197 ms
+2025-01-07 07:21:57 [info]: POST /auth/login 500 27 - 432.407 ms
+2025-01-07 07:25:37 [info]: New user registered: mintesinotteferamt@gmail.com (ID: 6)
+2025-01-07 07:25:38 [info]: POST /auth/register 201 43 - 482.264 ms
+2025-01-07 07:25:40 [info]: GET /products/recents 304 - - 45.691 ms
+2025-01-07 07:25:40 [info]: GET /products/recents 304 - - 12.923 ms
+2025-01-07 07:25:52 [info]: GET /src/components/logo/logo4.png 404 30 - 3.513 ms
+2025-01-07 07:26:13 [info]: GET /src/components/logo/logo4.png 404 30 - 2.482 ms
+2025-01-07 07:26:32 [info]: POST /auth/login 500 27 - 413.362 ms
+2025-01-07 07:26:42 [info]: GET /src/components/logo/logo4.png 404 30 - 1.319 ms

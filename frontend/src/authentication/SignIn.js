@@ -141,6 +141,41 @@ export default function SignIn() {
         }
     };
 
+
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault();
+    //     const newErrors = validate();
+    //     if (Object.keys(newErrors).length > 0) {
+    //       setErrors(newErrors);
+    //     } else {
+    //       try {
+    //         const response = await axios.post('http://localhost:5000/auth/login', formData);
+      
+    //         if (response.data.authToken) {
+    //           sessionStorage.setItem('fullname', response.data.fullname);
+    //           sessionStorage.setItem('authToken', response.data.authToken);
+      
+    //           // Check for pending cart item
+    //           const pendingItem = sessionStorage.getItem('pendingCartItem');
+    //           if (pendingItem) {
+    //             const item = JSON.parse(pendingItem);
+    //             // Add item to cart
+    //             axios.post('/api/cart', { item })
+    //               .then(() => sessionStorage.removeItem('pendingCartItem')) // Clear pending item
+    //               .catch(err => console.error('Error adding pending item to cart:', err));
+    //           }
+      
+    //           navigate('/'); // Redirect to dashboard
+    //         }
+    //       } catch (error) {
+    //         console.error('There was an error logging in!', error);
+    //         setServerError(error.response?.data?.message || 'There was an error logging in!');
+    //       }
+    //     }
+    //   };
+      
+
+
     return (
         <CssVarsProvider defaultMode="light" disableTransitionOnChange>
             <CssBaseline />

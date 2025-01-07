@@ -21,8 +21,8 @@ import GoogleIcon from './GoogleIcon';
 // import myLogo5 from '../components/logo/logo4.png';
 import myLogo5 from '../components/logo/logo6.png';
 import axios from 'axios';
-
-
+import { useContext } from 'react';
+import { CartContext } from '../App';
 
 
 
@@ -34,7 +34,7 @@ function ColorSchemeToggle(props) {
     React.useEffect(() => setMounted(true), []);
 
 
-    
+
     return (
         <IconButton
             aria-label="toggle light/dark mode"
@@ -54,6 +54,8 @@ function ColorSchemeToggle(props) {
 
 export default function SignIn() {
     const navigate = useNavigate();
+    const { addToCart } = useContext(CartContext);
+
 
     const [formData, setFormData] = useState({
         email: '',
@@ -68,7 +70,7 @@ export default function SignIn() {
     const logoStyle = {
         height: '50px',
         marginRight: '10px',
-      };
+    };
 
 
     const validate = () => {
@@ -93,6 +95,7 @@ export default function SignIn() {
     //         [name]: type === 'checkbox' ? checked : value,
     //     });
     // };
+
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         const updatedValue = type === 'checkbox' ? checked : value;
@@ -124,6 +127,15 @@ export default function SignIn() {
                 if (response.data.authToken) {
                     sessionStorage.setItem('fullname', response.data.fullname);  // Store the fullname in sessionStorage
                     sessionStorage.setItem('authToken', response.data.authToken);  // Store the token in sessionStorage
+
+                    // Check if there's a pending cart item
+                    const pendingCartItem = sessionStorage.getItem('pendingCartItem');
+                    if (pendingCartItem) {
+                        const { product, quantity } = JSON.parse(pendingCartItem);
+                        addToCart(product, quantity); // Add the pending item to the cart
+                        sessionStorage.removeItem('pendingCartItem'); // Clear the stored item
+                    }
+
                     navigate('/');  // Navigate to the dashboard
 
                 }
@@ -150,11 +162,11 @@ export default function SignIn() {
     //     } else {
     //       try {
     //         const response = await axios.post('http://localhost:5000/auth/login', formData);
-      
+
     //         if (response.data.authToken) {
     //           sessionStorage.setItem('fullname', response.data.fullname);
     //           sessionStorage.setItem('authToken', response.data.authToken);
-      
+
     //           // Check for pending cart item
     //           const pendingItem = sessionStorage.getItem('pendingCartItem');
     //           if (pendingItem) {
@@ -164,7 +176,7 @@ export default function SignIn() {
     //               .then(() => sessionStorage.removeItem('pendingCartItem')) // Clear pending item
     //               .catch(err => console.error('Error adding pending item to cart:', err));
     //           }
-      
+
     //           navigate('/'); // Redirect to dashboard
     //         }
     //       } catch (error) {
@@ -173,7 +185,7 @@ export default function SignIn() {
     //       }
     //     }
     //   };
-      
+
 
 
     return (

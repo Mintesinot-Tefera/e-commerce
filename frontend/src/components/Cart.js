@@ -386,7 +386,7 @@ const Cart = ({ cartItems, onUpdateQuantity, onCheckout }) => {
   //       headers: { 'Content-Type': 'application/json' },
   //       body: JSON.stringify({ cartItems }),
   //     });
-  
+
   //     const { id } = await response.json();
   //     const stripe = await stripePromise;
   //     await stripe.redirectToCheckout({ sessionId: id });
@@ -394,13 +394,13 @@ const Cart = ({ cartItems, onUpdateQuantity, onCheckout }) => {
   //     console.error('Error during checkout:', error);
   //   }
   // };
-  
-  
-  
-  
-  
+
+
+
+
+
   const handleCheckout = async () => {
-console.log(cartItems);
+    console.log(cartItems);
 
     try {
       const response = await fetch('http://localhost:5000/create-checkout-session', {
@@ -408,25 +408,25 @@ console.log(cartItems);
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ cartItems }), // Pass cart data to the backend
       });
-  
+
       if (!response.ok) {
         throw new Error('Failed to create checkout session');
       }
-  
+
       const { id } = await response.json(); // Extract session ID from response
-  
+
       const stripe = await stripePromise;
       if (!stripe) {
         throw new Error('Stripe.js has not been loaded');
       }
-  
+
       // Redirect to Stripe Checkout
       await stripe.redirectToCheckout({ sessionId: id });
     } catch (error) {
       console.error('Error during checkout:', error);
     }
   };
-  
+
 
 
   return (
@@ -458,7 +458,7 @@ console.log(cartItems);
             </div>
           ))}
           <h3>Total: ${calculateTotal()}</h3>
-          <button onClick={handleCheckout} 
+          <button onClick={handleCheckout}
             style={{ padding: '10px 20px', backgroundColor: '#092f6e', color: '#fff' }}>
             Checkout
           </button>

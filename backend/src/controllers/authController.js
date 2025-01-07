@@ -113,9 +113,7 @@ const login = (req, res) => {
             const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
 
             logger.info(`User logged in: ${email} (ID: ${user.id})`);
-
             // return res.status(200).json({ token });
-
             return res.status(200).json({ authToken: token, fullname: user.fullname });
 
         } catch (compareError) {

@@ -12,6 +12,7 @@ import Link from '@mui/joy/Link';
 
 const Header = ({ navigateToCart }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+
   // const [cartItems, setCartItems] = useState(3); // Sample cart items count
 
   const { cart } = useContext(CartContext);
@@ -31,7 +32,7 @@ const Header = ({ navigateToCart }) => {
     sessionStorage.removeItem('authToken');
     sessionStorage.removeItem('fullname');
     setIsLoggedIn(false);
-    navigate('/signin');
+    navigate('/');
   };
 
   const toggleDropdown = () => {
@@ -215,11 +216,9 @@ const Header = ({ navigateToCart }) => {
         </div>
 
 
-
         {/* <Link href="/signin"> <button style={buttonStyle}> Login </button> </Link>
 
         <Link href="/signup"> <span style={{ color: '#fff', cursor: 'pointer' }}> Sign Up</span> </Link> */}
-
 
 
         {!isLoggedIn ? (
@@ -242,10 +241,24 @@ const Header = ({ navigateToCart }) => {
           {showDropdown && (
             <div
               style={{
+
+                // display: isDropdownVisible ? 'block' : 'none',
+                // top: '100%',
+                // left: '0',
+                // backgroundColor: '#004d4d',
+                // boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+                // padding: '10px 0',
+                // borderRadius: '4px',
+                // zIndex: '100',
+
+
                 position: 'absolute',
                 top: '50px',
                 right: '20px',
-                background: '#fff',
+
+                // background: '#fff',
+                backgroundColor: '#004d4d',
+
                 border: '1px solid #ddd',
                 borderRadius: '5px',
                 boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',

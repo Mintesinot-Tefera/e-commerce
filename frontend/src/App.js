@@ -69,7 +69,7 @@ function App() {
 
       
           <Routes>
-            <Route path="/" element={<HomePage/>} />
+            <Route path="/homepage" element={<HomePage/>} />
             <Route exact path="/signin" element={<SignIn />} />
             <Route exact path="/signup" element={<SignUp />} />
             {/* <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateQuantity={updateQuantity} onCheckout={handleCheckout}/>} /> */}

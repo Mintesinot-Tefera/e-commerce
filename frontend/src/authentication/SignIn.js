@@ -136,7 +136,7 @@ export default function SignIn() {
                         sessionStorage.removeItem('pendingCartItem'); // Clear the stored item
                     }
 
-                    navigate('/');  // Navigate to the dashboard
+                    navigate('/homepage');  // Navigate to the dashboard
 
                 }
                 // sessionStorage.setItem('authToken', response.data.token);
@@ -234,7 +234,9 @@ export default function SignIn() {
                     >
 
                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <img src={myLogo5} alt="Logo" style={logoStyle} />
+                            <Link href="/homepage">
+                                <img src={myLogo5} alt="Logo" style={logoStyle} />
+                            </Link>
                             {/* <div style={titleStyle}>YIGEBYU</div> */}
                         </div>
 
@@ -400,7 +402,7 @@ export default function SignIn() {
                     </Box>
                     <Box component="footer" sx={{ py: 3 }}>
                         <Typography level="body-xs" textAlign="center">
-                            © ATMCareConnect {new Date().getFullYear()}
+                            © Yigebyu {new Date().getFullYear()}
                         </Typography>
                     </Box>
                 </Box>

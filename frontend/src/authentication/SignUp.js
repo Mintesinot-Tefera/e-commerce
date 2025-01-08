@@ -17,6 +17,8 @@ import { useNavigate } from 'react-router-dom';
 import FormHelperText from '@mui/joy/FormHelperText';
 import Link from '@mui/joy/Link';
 import axios from 'axios';
+import myLogo5 from '../components/logo/logo6.png';
+
 
 
 
@@ -45,6 +47,8 @@ function ColorSchemeToggle(props) {
     );
 }
 
+
+
 export default function SignUp() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -55,6 +59,13 @@ export default function SignUp() {
     });
 
     const [errors, setErrors] = useState({});
+
+    const logoStyle = {
+        height: '50px',
+        marginRight: '10px',
+    };
+
+
 
     const validate = () => {
         const newErrors = {};
@@ -102,7 +113,7 @@ export default function SignUp() {
                     password: formData.password,
                 });
                 alert(response.data.message);
-                navigate('/');
+                navigate('/homepage');
             } catch (error) {
                 if (error.response && error.response.data) {
                     alert(error.response.data.message);
@@ -153,11 +164,23 @@ export default function SignUp() {
                     <Box
                         component="header"
                         sx={{
-                            py: 3,
+                            pt: 3,
+                            pb: 1,
                             display: 'flex',
                             justifyContent: 'space-between',
                         }}
                     >
+
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <Link href="/homepage">
+                                <img src={myLogo5} alt="Logo" style={logoStyle} />
+                            </Link>
+                            {/* <img src={myLogo5} alt="Logo" style={logoStyle} /> */}
+                            {/* <div style={titleStyle}>YIGEBYU</div> */}
+                        </div>
+
+
+
                         {/* <Box sx={{ gap: 2, display: 'flex', alignItems: 'center' }}>
                             <IconButton variant="soft" color="primary" size="sm">
                                 <BadgeRoundedIcon />
@@ -189,7 +212,7 @@ export default function SignUp() {
                             },
                         }}
                     >
-                        <Stack gap={4} sx={{ mb: 2 }}>
+                        <Stack gap={4} sx={{ mb: 0 }}>
                             <Stack gap={1}>
                                 <Typography component="h1" level="h3">
                                     Register

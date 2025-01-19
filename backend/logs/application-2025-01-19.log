@@ -1,0 +1,85 @@
+2025-01-19 03:17:57 [info]: GET /products/recents 304 - - 64.916 ms
+2025-01-19 03:17:57 [info]: GET /products/recents 304 - - 23.034 ms
+2025-01-19 03:17:58 [info]: GET /src/components/logo/logo4.png 404 30 - 0.478 ms
+2025-01-19 03:18:12 [info]: POST /create-checkout-session 200 75 - 1451.768 ms
+2025-01-19 03:18:58 [info]: GET /products/recents 304 - - 16.396 ms
+2025-01-19 03:18:58 [info]: GET /products/recents 304 - - 3.397 ms
+2025-01-19 03:18:59 [info]: GET /src/components/logo/logo4.png 404 30 - 1.815 ms
+2025-01-19 03:19:12 [info]: POST /create-checkout-session 200 75 - 622.816 ms
+2025-01-19 03:19:25 [info]: GET /products/recents 304 - - 3.809 ms
+2025-01-19 03:19:25 [info]: GET /products/recents 304 - - 6.424 ms
+2025-01-19 03:19:26 [info]: GET /src/components/logo/logo4.png 404 30 - 1.037 ms
+2025-01-19 03:21:37 [info]: User logged in: mintesinottefera@gmail.com (ID: 10)
+2025-01-19 03:21:37 [info]: POST /auth/login 200 295 - 376.281 ms
+2025-01-19 03:21:37 [info]: GET /products/recents 304 - - 5.364 ms
+2025-01-19 03:21:37 [info]: GET /products/recents 304 - - 6.193 ms
+2025-01-19 03:22:21 [info]: GET /products?subcategory=Mobile+Phones 304 - - 9.636 ms
+2025-01-19 03:22:31 [info]: GET /products?subcategory=Laptops 304 - - 3.689 ms
+2025-01-19 03:23:00 [info]: POST /create-checkout-session 200 75 - 1222.206 ms
+2025-01-19 03:23:28 [info]: GET /products/recents 304 - - 7.848 ms
+2025-01-19 03:23:28 [info]: GET /products/recents 304 - - 5.498 ms
+2025-01-19 03:23:29 [info]: GET /src/components/logo/logo4.png 404 30 - 1.666 ms
+2025-01-19 03:26:39 [info]: User logged in: mintesinottefera@gmail.com (ID: 10)
+2025-01-19 03:26:39 [info]: POST /auth/login 200 295 - 287.979 ms
+2025-01-19 03:26:39 [info]: GET /products/recents 304 - - 3.086 ms
+2025-01-19 03:26:39 [info]: GET /products/recents 304 - - 9.030 ms
+2025-01-19 03:27:29 [info]: GET /products?subcategory=Mobile+Phones 304 - - 6.068 ms
+2025-01-19 03:28:04 [info]: GET /products/recents 304 - - 2.323 ms
+2025-01-19 03:28:04 [info]: GET /products/recents 304 - - 4.615 ms
+2025-01-19 03:28:06 [info]: GET /src/components/logo/logo4.png 404 30 - 0.498 ms
+2025-01-19 03:28:57 [info]: User logged in: mintesinottefera@gmail.com (ID: 10)
+2025-01-19 03:28:57 [info]: POST /auth/login 200 295 - 250.878 ms
+2025-01-19 03:28:57 [info]: GET /products/recents 304 - - 3.493 ms
+2025-01-19 03:28:57 [info]: GET /products/recents 304 - - 6.897 ms
+2025-01-19 03:29:43 [info]: GET /products?subcategory=Mobile+Phones 304 - - 6.128 ms
+2025-01-19 03:29:55 [info]: GET /products?subcategory=Laptops 304 - - 4.285 ms
+2025-01-19 03:30:34 [info]: GET /products/recents 304 - - 3.537 ms
+2025-01-19 03:30:34 [info]: GET /products/recents 304 - - 4.015 ms
+2025-01-19 03:30:35 [info]: GET /src/components/logo/logo4.png 404 30 - 0.566 ms
+2025-01-19 03:31:28 [info]: User logged in: mintesinottefera@gmail.com (ID: 10)
+2025-01-19 03:31:28 [info]: POST /auth/login 200 295 - 258.916 ms
+2025-01-19 03:31:28 [info]: GET /products/recents 304 - - 7.625 ms
+2025-01-19 03:31:28 [info]: GET /products/recents 304 - - 13.818 ms
+2025-01-19 03:32:04 [info]: GET /products?subcategory=Mobile+Phones 304 - - 4.318 ms
+2025-01-19 03:32:17 [info]: GET /products?subcategory=Laptops 304 - - 3.720 ms
+2025-01-19 03:32:45 [info]: POST /create-checkout-session 200 75 - 1215.394 ms
+2025-01-19 03:32:46 [info]: POST /create-checkout-session - - - - ms
+2025-01-19 03:33:18 [info]: GET /products/recents 304 - - 5.380 ms
+2025-01-19 03:33:18 [info]: GET /products/recents 304 - - 6.494 ms
+2025-01-19 03:33:20 [info]: GET /src/components/logo/logo4.png 404 30 - 0.487 ms
+2025-01-19 03:45:53 [info]: User logged in: mintesinottefera@gmail.com (ID: 10)
+2025-01-19 03:45:53 [info]: POST /auth/login 200 295 - 1060.790 ms
+2025-01-19 03:46:48 [info]: GET /products/recents 304 - - 167.011 ms
+2025-01-19 03:46:48 [info]: GET /products/recents 304 - - 13.801 ms
+2025-01-19 03:46:49 [info]: GET /products/recents 304 - - 32.044 ms
+2025-01-19 03:46:49 [info]: GET /products/recents 304 - - 26.461 ms
+2025-01-19 03:46:52 [info]: GET /src/components/logo/logo4.png 404 30 - 12.836 ms
+2025-01-19 03:46:52 [info]: GET /src/components/logo/logo4.png 404 30 - 8.260 ms
+2025-01-19 03:48:54 [info]: User logged in: mintesinottefera@gmail.com (ID: 10)
+2025-01-19 03:48:54 [info]: POST /auth/login 200 295 - 370.760 ms
+2025-01-19 03:48:54 [info]: GET /products/recents 304 - - 28.160 ms
+2025-01-19 03:48:55 [info]: GET /products/recents 304 - - 26.922 ms
+2025-01-19 03:49:34 [info]: GET /products?subcategory=Mobile+Phones 304 - - 8.744 ms
+2025-01-19 03:49:47 [info]: GET /products?subcategory=Laptops 304 - - 4.980 ms
+2025-01-19 03:50:09 [info]: POST /create-checkout-session 200 75 - 1510.314 ms
+2025-01-19 03:50:44 [info]: GET /products/recents 304 - - 49.086 ms
+2025-01-19 03:50:44 [info]: GET /products/recents 304 - - 71.748 ms
+2025-01-19 03:50:46 [info]: GET /src/components/logo/logo4.png 404 30 - 0.811 ms
+2025-01-19 05:24:35 [info]: User logged in: mintesinottefera@gmail.com (ID: 10)
+2025-01-19 05:24:35 [info]: POST /auth/login 200 295 - 571.266 ms
+2025-01-19 05:24:36 [info]: GET /products/recents 304 - - 42.323 ms
+2025-01-19 05:24:36 [info]: GET /products/recents 304 - - 9.336 ms
+2025-01-19 05:25:27 [info]: GET /products?subcategory=Mobile+Phones 304 - - 7.942 ms
+2025-01-19 05:25:38 [info]: GET /products?subcategory=Laptops 304 - - 4.455 ms
+2025-01-19 05:26:05 [info]: POST /create-checkout-session 200 75 - 1699.274 ms
+2025-01-19 05:26:47 [info]: GET /products/recents 304 - - 14.134 ms
+2025-01-19 05:26:47 [info]: GET /products/recents 304 - - 36.576 ms
+2025-01-19 05:26:50 [info]: GET /src/components/logo/logo4.png 404 30 - 2.798 ms
+2025-01-19 05:47:21 [info]: User logged in: mintesinottefera@gmail.com (ID: 10)
+2025-01-19 05:47:21 [info]: POST /auth/login 200 295 - 570.355 ms
+2025-01-19 05:47:21 [info]: GET /products/recents 304 - - 28.080 ms
+2025-01-19 05:47:21 [info]: GET /products/recents 304 - - 20.553 ms
+2025-01-19 05:47:49 [info]: POST /create-checkout-session 200 75 - 1173.637 ms
+2025-01-19 05:48:26 [info]: GET /products/recents 304 - - 48.100 ms
+2025-01-19 05:48:26 [info]: GET /products/recents 304 - - 111.956 ms
+2025-01-19 05:48:28 [info]: GET /src/components/logo/logo4.png 404 30 - 10.839 ms

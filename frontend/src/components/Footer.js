@@ -78,7 +78,7 @@ const Footer = () => {
         <div style={footerContactStyle}>
           <h3 style={headingStyle}>Contact Us</h3>
           <p style={textStyle}>123 E-commerce St.</p>
-          <p style={textStyle}>City, Country</p>
+          <p style={textStyle}>Addis Ababa, Ethiopia</p>
           <p style={textStyle}>Email: support@example.com</p>
           <p style={textStyle}>Phone: +1 (555) 123-4567</p>
           <div style={socialMediaStyle}>

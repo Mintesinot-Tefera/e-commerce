@@ -72,7 +72,6 @@ function App() {
           <Route exact path="/signup" element={<SignUp />} />
           {/* <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateQuantity={updateQuantity} onCheckout={handleCheckout}/>} /> */}
 
-          {/* <Route path="/cart" element={<CartPage cartItems={cartItems} />} /> */}
         </Routes>
 
       </div>

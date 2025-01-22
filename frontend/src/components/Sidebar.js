@@ -80,38 +80,3 @@ const Sidebar = ({ categories, onSubcategoryClick }) => {
 
 export default Sidebar;
 
-
-
-
-
-
-
-
-// const Sidebar = ({ categories, onSubcategoryClick }) => (
-//   <div>
-//     {categories.map((category) => (
-//       <div key={category.name} style={{ marginBottom: '10px' }}>
-//         <h4>{category.name}</h4>
-//         <ul style={{ listStyle: 'none', padding: 0 }}>
-//           {category.subcategories.map((subcategory) => (
-//             <li
-//               key={subcategory.name}
-//               style={{
-//                 cursor: 'pointer',
-//                 margin: '5px 0',
-//                 padding: '5px',
-//                 backgroundColor: '#f9f9f9',
-//                 borderRadius: '5px',
-//               }}
-//               onClick={() => onSubcategoryClick(subcategory.name)}
-//             >
-//               {subcategory.name}
-//             </li>
-//           ))}
-//         </ul>
-//       </div>
-//     ))}
-//   </div>
-// );
-
-// export default Sidebar;

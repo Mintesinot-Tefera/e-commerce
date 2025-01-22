@@ -15,32 +15,7 @@ const HomePage = () => {
   const navigateToCart = () => setShowCart(true);
   const backToProducts = () => setShowCart(false);
 
-
-  // const handleAddToCart = (product) => {
-  //   setCartItems((prevCartItems) => {
-  //     const existingItem = prevCartItems.find((item) => item.id === product.id);
-  //     if (existingItem) {
-  //       return prevCartItems.map((item) =>
-  //         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-  //       );
-  //     }
-  //     return [...prevCartItems, { ...product, quantity: 1 }];
-  //   });
-  // };
-
-  // const handleCartIconClick = () => {
-  //   setShowCartPage((prevState) => !prevState);
-  // };
-
   const cartItemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
-
-  // const filteredProducts = selectedCategory === 'Recents' 
-  //   ? allProducts 
-  //   : allProducts.filter((product) => product.category === selectedCategory);
-
-  // const handleCategoryChange = (category) => {
-  //   setSelectedCategory(category);
-  // };
 
   const homepageStyle = {
     padding: '20px 0 20px 0',
@@ -82,19 +57,7 @@ const HomePage = () => {
         <AdvertisingCard />
         <WelcomeBox />
 
-        {/* Category Selector */}
-        {/* <div style={categorySelectorStyle}>
-          {categories.map((category) => (
-            <button
-              key={category}
-              style={categoryButtonStyle(category)}
-              onClick={() => handleCategoryChange(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div> */}
-
+  
 
         {/* <ProductListWithDetails products={allProducts} categories={categories} /> */}
 
@@ -103,13 +66,6 @@ const HomePage = () => {
         {/* <Sidebar categories={categories} /> */}
 
 
-
-        {/* Product Grid */}
-        {/* <div style={productGridStyle}>
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div> */}
       </div>
       <Footer />
     </div>

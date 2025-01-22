@@ -1,26 +1,3 @@
-// // Footer.js
-// import React from 'react';
-
-// const Footer = () => {
-//   const footerStyle = {
-//     backgroundColor: '#2c3e50',
-//     color: 'white',
-//     padding: '10px',
-//     textAlign: 'center',
-//     position: 'fixed',
-//     left: '0',
-//     bottom: '0',
-//     width: '100%',
-//     fontSize: '0.9rem',
-//   };
-
-//   return <footer style={footerStyle}>© 2023 My E-commerce Store. All rights reserved.</footer>;
-// };
-
-// export default Footer;
-
-
-
 // Footer.js
 import React from 'react';
 

@@ -4,12 +4,12 @@
 This project is a web-based e-commerce platform for a supermarket. It enables users to browse products, manage their carts, and place orders. The system integrates a React.js frontend with a Node.js backend and utilizes MySQL for data storage. Stripe Checkout is integrated for seamless payment processing.
 
 ## Features
-User Authentication: Registration and login with JWT-based authentication.
-Product Management: View products with support for categories and detailed descriptions.
-Cart System: Add, update, and remove items in the cart.
-Order Placement: Place and view orders with live price calculation.
+**User Authentication**: Registration and login with JWT-based authentication.
+**Product Management**: View products with support for categories and detailed descriptions.
+**Cart System**: Add, update, and remove items in the cart.
+**Order Placement**: Place and view orders with live price calculation.
 Payment Integration: Secure payments using Stripe Checkout.
-Responsive Design: Fully responsive UI for both desktop and mobile.
+**Responsive Design**: Fully responsive UI for both desktop and mobile.
 ### Prerequisites
 Ensure you have the following installed:
 

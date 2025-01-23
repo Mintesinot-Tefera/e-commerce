@@ -4,28 +4,28 @@
 This project is a web-based e-commerce platform for a supermarket. It enables users to browse products, manage their carts, and place orders. The system integrates a React.js frontend with a Node.js backend and utilizes MySQL for data storage. Stripe Checkout is integrated for seamless payment processing.
 
 ## Features
-**User Authentication**: Registration and login with JWT-based authentication.
-**Product Management**: View products with support for categories and detailed descriptions.
-**Cart System**: Add, update, and remove items in the cart.
+**User Authentication**: Registration and login with JWT-based authentication.<br/>
+**Product Management**: View products with support for categories and detailed descriptions.<br/>
+**Cart System**: Add, update, and remove items in the cart.<br/>
 **Order Placement**: Place and view orders with live price calculation.
-Payment Integration: Secure payments using Stripe Checkout.
-**Responsive Design**: Fully responsive UI for both desktop and mobile.
+Payment Integration: Secure payments using Stripe Checkout.<br/>
+**Responsive Design**: Fully responsive UI for both desktop and mobile.<br/>
 ### Prerequisites
 Ensure you have the following installed:
 
-Node.js (v14.x or higher)
-MySQL
-Git (for cloning the repository)
-Stripe account (for payment integration)
-Setup Instructions
-Step 1: Clone the repository
+Node.js (v14.x or higher)<br/>
+MySQL<br/>
+Git (for cloning the repository)<br/>
+Stripe account (for payment integration)<br/>
+### Setup Instructions
+**Step 1**: Clone the repository
 bash
 ```
 git clone https://github.com/Mintesinot-Tefera/e-commerce.git
 cd e-commerce
 ```  
 
-Step 2: Install dependencies
+**Step 2:** Install dependencies
 For the backend:
 
 ```
@@ -38,7 +38,7 @@ For the frontend:
 cd ../frontend  
 npm install  
 ```
-Step 3: Set up environment variables
+**Step 3**: Set up environment variables
 For the backend, create a .env file in the backend directory with the following content:
 
 dotenv

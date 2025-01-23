@@ -59,7 +59,7 @@ dotenv
 REACT_APP_API_URL=http://localhost:5000  
 REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key  
 ```
-Step 4: Set up the MySQL database
+**Step 4**: Set up the MySQL database
 Start your MySQL server and create a new database:
 
 sql
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS order_items (
   FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE  
 ); 
 ``` 
-Step 5: Start the application
+**Step 5**: Start the application
 Start the backend:
 
 ```
@@ -129,25 +129,25 @@ Your website will now be running at http://localhost:3000.
 
 API Endpoints
 Auth
-POST /auth/register: Register a new user
-POST /auth/login: Login a user and return a JWT token
+POST **/auth/register**: Register a new user
+POST **/auth/login**: Login a user and return a JWT token
 Products
-GET /products: Retrieve all products
-GET /products/:id: Retrieve a product by ID
-POST /products: Add a new product (Admin only)
-PUT /products/:id: Update a product (Admin only)
-DELETE /products/:id: Delete a product (Admin only)
+GET **/products**: Retrieve all products
+GET **/products/:id**: Retrieve a product by ID
+POST **/products**: Add a new product (Admin only)
+PUT **/products/:id**: Update a product (Admin only)
+DELETE **/products/:id**: Delete a product (Admin only)
 Orders
-POST /orders: Place a new order
-GET /orders: Retrieve all orders for a user
-GET /orders/:id: Retrieve order details by ID
-Payment Integration
+POST **/orders**: Place a new order
+GET **/orders**: Retrieve all orders for a user
+GET **/orders/:id**: Retrieve order details by ID
+### Payment Integration
 This project uses Stripe for payment processing. Ensure your Stripe keys are correctly configured in both backend and frontend .env files.
 
-Logging
+### Logging
 Logs for authentication, product management, and order placement are stored in the logs/ directory on the backend.
 
-Future Improvements
+### Future Improvements
 Add user reviews and ratings for products.
 Implement email notifications for order status updates.
 Add multi-language support for international users.

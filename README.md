@@ -127,20 +127,20 @@ npm start
 ````  
 Your website will now be running at http://localhost:3000.
 
-API Endpoints
+**API Endpoints**<br/>
 Auth
-POST **/auth/register**: Register a new user
-POST **/auth/login**: Login a user and return a JWT token
+POST **/auth/register**: Register a new user<br/>
+POST **/auth/login**: Login a user and return a JWT token<br/>
 Products
-GET **/products**: Retrieve all products
-GET **/products/:id**: Retrieve a product by ID
-POST **/products**: Add a new product (Admin only)
-PUT **/products/:id**: Update a product (Admin only)
-DELETE **/products/:id**: Delete a product (Admin only)
+GET **/products**: Retrieve all products<br/>
+GET **/products/:id**: Retrieve a product by ID<br/>
+POST **/products**: Add a new product (Admin only)<br/>
+PUT **/products/:id**: Update a product (Admin only)<br/>
+DELETE **/products/:id**: Delete a product (Admin only)<br/>
 Orders
-POST **/orders**: Place a new order
-GET **/orders**: Retrieve all orders for a user
-GET **/orders/:id**: Retrieve order details by ID
+POST **/orders**: Place a new order<br/>
+GET **/orders**: Retrieve all orders for a user<br/>
+GET **/orders/:id**: Retrieve order details by ID<br/>
 ### Payment Integration
 This project uses Stripe for payment processing. Ensure your Stripe keys are correctly configured in both backend and frontend .env files.
 

@@ -20,31 +20,29 @@ Stripe account (for payment integration)
 Setup Instructions
 Step 1: Clone the repository
 bash
-Copy
-Edit
+```
 git clone https://github.com/Mintesinot-Tefera/e-commerce.git
-cd supermarket-website  
+cd e-commerce
+```  
+
 Step 2: Install dependencies
 For the backend:
 
-bash
-Copy
-Edit
+```
 cd backend  
 npm install  
+```
 For the frontend:
 
-bash
-Copy
-Edit
+```
 cd ../frontend  
 npm install  
+```
 Step 3: Set up environment variables
 For the backend, create a .env file in the backend directory with the following content:
 
 dotenv
-Copy
-Edit
+```
 PORT=5000  
 JWT_SECRET=your_jwt_secret  
 DB_HOST=localhost  
@@ -53,25 +51,25 @@ DB_PASSWORD=
 DB_NAME=supermarket  
 STRIPE_SECRET_KEY=your_stripe_secret_key  
 STRIPE_WEBHOOK_SECRET=your_webhook_secret  
+```
 For the frontend, create a .env file in the frontend directory with the following content:
 
 dotenv
-Copy
-Edit
+```
 REACT_APP_API_URL=http://localhost:5000  
 REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key  
+```
 Step 4: Set up the MySQL database
 Start your MySQL server and create a new database:
 
 sql
-Copy
-Edit
-CREATE DATABASE supermarket;  
+```
+CREATE DATABASE ecommerce;  
+```
 Run the following SQL scripts to create necessary tables:
 
 sql
-Copy
-Edit
+```
 CREATE TABLE IF NOT EXISTS users (  
   id INT AUTO_INCREMENT PRIMARY KEY,  
   username VARCHAR(50) NOT NULL,  
@@ -80,7 +78,8 @@ CREATE TABLE IF NOT EXISTS users (
   role ENUM('user', 'admin') DEFAULT 'user',  
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  
 );  
-
+```
+```
 CREATE TABLE IF NOT EXISTS products (  
   id INT AUTO_INCREMENT PRIMARY KEY,  
   name VARCHAR(255) NOT NULL,  
@@ -91,7 +90,8 @@ CREATE TABLE IF NOT EXISTS products (
   imageUrl VARCHAR(255),  
   imageUrl2 VARCHAR(255)  
 );  
-
+```
+```
 CREATE TABLE IF NOT EXISTS orders (  
   id INT AUTO_INCREMENT PRIMARY KEY,  
   user_id INT NOT NULL,  
@@ -100,7 +100,8 @@ CREATE TABLE IF NOT EXISTS orders (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE  
 );  
-
+```
+```
 CREATE TABLE IF NOT EXISTS order_items (  
   id INT AUTO_INCREMENT PRIMARY KEY,  
   order_id INT NOT NULL,  
@@ -109,22 +110,21 @@ CREATE TABLE IF NOT EXISTS order_items (
   price DECIMAL(10,2) NOT NULL,  
   FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,  
   FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE  
-);  
+); 
+``` 
 Step 5: Start the application
 Start the backend:
 
-bash
-Copy
-Edit
+```
 cd backend  
-npm start  
+npm start
+```  
 Start the frontend:
 
-bash
-Copy
-Edit
+````
 cd ../frontend  
-npm start  
+npm start
+````  
 Your website will now be running at http://localhost:3000.
 
 API Endpoints
